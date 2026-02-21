@@ -1157,14 +1157,6 @@ int main (int argc, char* argv[])
 			.signalSemaphoreCount = 1,
 			.pSignalSemaphores = &render_semaphores[image_index]
 		};
-		// FIXME
-		// 	getting a segfault here
-		// 		inside of the vulkan driver
-		// 		possibly an initialization error somewhere
-		//
-		// 	go back over the whole reference implementation file
-		// 		make sure we arent missing any lines
-		// 		they arent all on the tutorial page
 		check_vk (vkQueueSubmit (queue, 1, &submit_info, fences[frame_index]));
 
 		frame_index = (frame_index + 1) % MAX_FRAMES_IN_FLIGHT;
