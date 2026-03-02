@@ -1,6 +1,9 @@
 project('vulkan', 'c', 'cpp')
 
 cc = meson.get_compiler('c')
+slang = find_program('slangc', required : true)
+
+run_command(slang, 'source/shader.slang', '-matrix-layout-column-major', '-target', 'spirv', '-o', 'source/shader.spv', check : true)
 
 vulkan_dependencies = [
   cc.find_library('m'),
