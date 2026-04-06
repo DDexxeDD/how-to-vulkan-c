@@ -4,7 +4,7 @@ A C implementation of the [How to Vulkan](https://www.howtovulkan.com) tutorial.
 
 The tutorial is written in a way that is mostly compatible with C so there is very little difference between this code and the reference code.  The biggest difference is that Slang does not currently have a C API, so the slang shader has to be compiled to spir-v outside of the program and loaded in.
 
-This implementation also includes `resources/suzanne_triangulated.obj` which is the same suzanne model that is included in the reference repo, but has been triangulated.  This is needed because fast obj (the obj loader used here) only properly handles meshes whose faces are all triangles.
+This implementation also includes `resources/suzanne_triangulated.obj` which is the same suzanne model that is included in the reference repo, but has already been triangulated.
 
 
 ## Building

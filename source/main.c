@@ -496,10 +496,8 @@ int main (int argc, char* argv[])
 	/*
 	 * mesh data
 	 */
-	// fast_obj does not handle obj faces with more than 3 vertices
-	// 	the original model from 'how to vulkan' has faces with 4 vertices
-	// we need to load a triangulated suzanne model for it to load/display properly
-	// 	otherwise we would have to triangulate it ourselves...
+	// i didnt want to handle triangulating the suzanne model myself
+	// 	so we load the already triangulated model
 	fastObjMesh* mesh = fast_obj_read ("resources/suzanne_triangulated.obj");
 	if (!mesh)
 	{
